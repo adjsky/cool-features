@@ -1,7 +1,8 @@
 # useToggle
 
 ```tsx
-const useToggle = () => useReducer((toggled) => !toggled, true)
+const useToggle = (initialValue = false) =>
+  useReducer((toggled) => !toggled, initialValue)
 ```
 
 # useClickOutside
