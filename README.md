@@ -19,10 +19,10 @@ const useClickOutside = (ref: RefObject<Node>, callback: () => void) => {
       }
     }
 
-    window.addEventListener("click", handleClick, true)
+    window.addEventListener("pointerdown", handleClick, true)
 
     return () => {
-      window.removeEventListener("click", handleClick, true)
+      window.removeEventListener("pointerdown", handleClick, true)
     }
     // callback is a function so on every render it'll be recreated and useEffect will be called again
     // for sake of optimization you can wrap outer callback in useCallback
