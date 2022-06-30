@@ -9,7 +9,7 @@ const useToggle = (initialValue = false) =>
 ```tsx
 const useClickOutside = (ref: RefObject<Node>, callback: () => void) => {
   useEffect(() => {
-    const handleClick = (event: MouseEvent) => {
+    const handleClick = (event: PointerEvent) => {
       if (
         ref.current &&
         event.target instanceof Node &&
